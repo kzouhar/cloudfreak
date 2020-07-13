@@ -4,7 +4,14 @@ pipeline {
       maven 'maven3'
                  jdk 'JDK8'
     }
-    stages {      
+    stages {
+        stage('Generate documentation') {
+                steps {
+                        sh 'asciidoctor -r asciidoctor-diagram src/docs/test.adoc'
+                        sh 'mvn  clean install package'
+                }
+        }
+
         stage('Build maven ') {
             steps { 
                     sh 'pwd'      

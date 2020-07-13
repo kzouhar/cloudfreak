@@ -1,0 +1,16 @@
+:source-highlighter: highlightjs
+:toc2:
+:toclevels: 4
+:imagesdir: ./res
+:Revision: version 1.0.0
+
+=== Sequence Diagram
+
+These are high level sequence diagrams that *do not* contain all the detailed information. +
+Sample responses can be found at link:../api/core/src/test/resources[`api/core/src/test/resources`].
+
+[plantuml, test.puml, svg]
+----
+include::res/test.puml[]
+----
+

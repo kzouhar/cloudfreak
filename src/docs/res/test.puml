@@ -1,0 +1,14 @@
+@startuml
+
+actor Client
+
+box "Account API" #LightBlue
+    boundary "Get Promise To Pay Details" as PromiseToPayDetails
+end box
+
+
+box "RESP" #LightGreen
+    boundary PaymentInstruction
+end box
+
+@enduml
