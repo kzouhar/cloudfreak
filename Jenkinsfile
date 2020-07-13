@@ -7,6 +7,7 @@ pipeline {
     stages {
         stage('Generate documentation') {
                 steps {
+                        sh 'gem install asciidoctor'
                         sh 'asciidoctor -r asciidoctor-diagram src/docs/test.adoc'
                         sh 'mvn  clean install package'
                 }
